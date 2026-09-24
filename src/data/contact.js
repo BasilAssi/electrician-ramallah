@@ -10,8 +10,8 @@ export const business = {
 };
 
 export const phones = [
-  { id: 'main', labelKey: 'contact.labels.main', number: '970590000000', whatsapp: true },
-  { id: 'solar', labelKey: 'contact.labels.solar', number: '970560000000', whatsapp: true },
+  { id: 'main', labelKey: 'contact.labels.main', number: '972566169101', whatsapp: true },
+  { id: 'solar', labelKey: 'contact.labels.solar', number: '970569945333', whatsapp: true },
 ];
 
 export const hours = {
