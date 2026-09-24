@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alaa-assi.vercel.app/sitemap.xml
+Sitemap: https://electrician-ramallah-v1.vercel.app/sitemap.xml
