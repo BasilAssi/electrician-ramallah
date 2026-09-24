@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #f5f2ea;
+  --color-paper-deep: #ebe6da;
+  --color-ink: #14202e;
+  --color-ink-soft: #4b5563;
+  --color-line: #d8d1c1;
+  --color-volt: #f5b700;
+  --color-volt-deep: #d99f00;
+  --color-wa: #1a7f45;
+
+  --font-sans: 'IBM Plex Sans Arabic', 'IBM Plex Sans', system-ui, sans-serif;
+  --font-latin: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  html[lang='en'] body {
+    font-family: var(--font-latin);
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-volt);
+    color: var(--color-ink);
+  }
+}
+
+/* خط التمديد: شريط رفيع بالأصفر زي شريط العزل */
+@utility tape {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--color-volt) 0 10px,
+    var(--color-ink) 10px 20px
+  );
+}
