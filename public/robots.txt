@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alaa-assi.netlify.app/sitemap.xml
+Sitemap: https://alaa-assi.vercel.app/sitemap.xml

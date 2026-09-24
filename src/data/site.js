@@ -1,5 +1,5 @@
 // الدومين النهائي للموقع (بدون / بالآخر) — مهم للـ canonical والـ sitemap.
-export const SITE_URL = 'https://alaa-assi.netlify.app';
+export const SITE_URL = 'https://alaa-assi.vercel.app';
 
 export const LANGS = {
   ar: { path: '/', dir: 'rtl', locale: 'ar_PS' },
