@@ -1,13 +1,14 @@
 import Button from './Button';
 import useLang from '../../hooks/useLang';
-import { buildWaLink } from '../../utils/whatsapp';
+import useWhatsAppHref from '../../hooks/useWhatsAppHref';
 import { formatPhone } from '../../utils/phone';
 
 export default function WhatsAppLink({ number, label, className }) {
   const { t } = useLang();
+  const waHref = useWhatsAppHref();
   return (
     <Button
-      href={buildWaLink(number, t('meta.whatsappMessage'))}
+      href={waHref(number)}
       icon="whatsapp"
       variant="whatsapp"
       target="_blank"

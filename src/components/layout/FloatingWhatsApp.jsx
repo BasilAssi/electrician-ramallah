@@ -1,17 +1,18 @@
 import Icon from '../ui/Icon';
 import useLang from '../../hooks/useLang';
 import { phones } from '../../data/contact';
-import { buildWaLink } from '../../utils/whatsapp';
+import useWhatsAppHref from '../../hooks/useWhatsAppHref';
 
 // زر واتساب عائم للديسكتوب (الموبايل عنده MobileContactBar)
 export default function FloatingWhatsApp() {
   const { t } = useLang();
+  const waHref = useWhatsAppHref();
   const wa = phones.find((p) => p.whatsapp);
   if (!wa) return null;
 
   return (
     <a
-      href={buildWaLink(wa.number, t('meta.whatsappMessage'))}
+      href={waHref(wa.number)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t('actions.whatsapp')}

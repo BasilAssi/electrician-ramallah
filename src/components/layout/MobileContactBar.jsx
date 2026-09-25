@@ -2,11 +2,12 @@ import Icon from '../ui/Icon';
 import useLang from '../../hooks/useLang';
 import { phones } from '../../data/contact';
 import { toTelHref } from '../../utils/phone';
-import { buildWaLink } from '../../utils/whatsapp';
+import useWhatsAppHref from '../../hooks/useWhatsAppHref';
 
 // شريط ثابت أسفل الشاشة على الموبايل: اتصال | واتساب
 export default function MobileContactBar() {
   const { t } = useLang();
+  const waHref = useWhatsAppHref();
   const main = phones[0];
   const wa = phones.find((p) => p.whatsapp) ?? main;
 
@@ -20,7 +21,7 @@ export default function MobileContactBar() {
         {t('actions.call')}
       </a>
       <a
-        href={buildWaLink(wa.number, t('meta.whatsappMessage'))}
+        href={waHref(wa.number)}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-center gap-2 bg-wa py-4 font-semibold text-white"
