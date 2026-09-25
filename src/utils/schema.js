@@ -13,7 +13,7 @@ export function buildBusinessSchema(lang, t) {
     alternateName: business.name[lang === 'ar' ? 'en' : 'ar'],
     description: t('meta.description'),
     url,
-    image: `${SITE_URL}/og-image.jpg`,
+    image: [`${SITE_URL}${LANGS[lang].ogImage}`, `${SITE_URL}/images/alaa-assi-electrician-ramallah-800.webp`],
     telephone: phones.map((p) => `+${p.number}`),
     ...(business.email && { email: business.email }),
     address: {

@@ -8,6 +8,7 @@ export default function Seo() {
   const url = `${SITE_URL}${LANGS[lang].path}`;
   const title = t('meta.title');
   const description = t('meta.description');
+  const ogImage = `${SITE_URL}${LANGS[lang].ogImage}`;
 
   return (
     <Head htmlAttributes={{ lang, dir }}>
@@ -22,10 +23,14 @@ export default function Seo() {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
-      <meta property="og:image" content={`${SITE_URL}/og-image.jpg`} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title} />
       <meta property="og:locale" content={LANGS[lang].locale} />
       <meta property="og:locale:alternate" content={LANGS[otherLang].locale} />
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content={ogImage} />
 
       <script type="application/ld+json">{JSON.stringify(buildBusinessSchema(lang, t))}</script>
       <script type="application/ld+json">{JSON.stringify(buildFaqSchema(t))}</script>

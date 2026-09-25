@@ -1,13 +1,13 @@
 // يولّد كرت QR لرابط التواصل: marketing/qr/qr-card.png + qr.svg (للطباعة)
 // التشغيل: npm run qr
-import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
-import { execFileSync } from 'node:child_process';
+import { writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
 import QRCode from 'qrcode';
 import { business, phones } from '../../src/data/contact.js';
 import { SITE_URL } from '../../src/data/site.js';
 import { formatPhone } from '../../src/utils/phone.js';
+import { renderHtml } from '../lib/render.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const OUT = resolve(ROOT, 'marketing/qr');
@@ -172,17 +172,6 @@ function buildCardHtml(qrSvg) {
 </html>`;
 }
 
-function findBrowser() {
-  const candidates = [
-    'C:/Program Files/Google/Chrome/Application/chrome.exe',
-    'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
-    'C:/Program Files/Microsoft/Edge/Application/msedge.exe',
-    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-    '/usr/bin/google-chrome',
-  ];
-  return candidates.find((p) => existsSync(p));
-}
-
 // ---------- Run ----------
 
 mkdirSync(OUT, { recursive: true });
@@ -193,21 +182,7 @@ writeFileSync(resolve(OUT, 'qr.svg'), qrSvg);
 const htmlPath = resolve(OUT, 'qr-card.html');
 writeFileSync(htmlPath, buildCardHtml(qrSvg));
 
-const browser = findBrowser();
-if (!browser) {
-  console.log('No Chrome/Edge found — open marketing/qr/qr-card.html and screenshot it manually.');
-} else {
-  execFileSync(browser, [
-    '--headless=new',
-    '--disable-gpu',
-    '--hide-scrollbars',
-    '--force-device-scale-factor=2',
-    '--window-size=1080,1350',
-    '--virtual-time-budget=20000',
-    `--screenshot=${resolve(OUT, 'qr-card.png')}`,
-    pathToFileURL(htmlPath).href,
-  ]);
-}
+renderHtml(htmlPath, resolve(OUT, 'qr-card.png'), { width: 1080, height: 1350, scale: 2 });
 
 console.log(`QR → ${TARGET_URL}`);
 console.log(`Files in ${OUT}: qr.svg, qr-card.html, qr-card.png`);

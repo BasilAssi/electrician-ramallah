@@ -8,7 +8,8 @@
     "build": "vite-react-ssg build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "qr": "node scripts/qr/generate.mjs"
+    "qr": "node scripts/qr/generate.mjs",
+    "og": "node scripts/og/generate.mjs"
   },
   "dependencies": {
     "react": "^19.3.0",
