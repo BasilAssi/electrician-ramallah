@@ -3,6 +3,8 @@ import SectionHeading from '../components/ui/SectionHeading';
 import useLang from '../hooks/useLang';
 import { business, stats } from '../data/contact';
 
+const PHOTO = '/images/alaa-assi-electrician-ramallah';
+
 export default function About() {
   const { t, lang } = useLang();
   const visibleStats = stats.filter((s) => s.value);
@@ -10,17 +12,25 @@ export default function About() {
   return (
     <Section id="about">
       <div className="grid gap-14 lg:grid-cols-[1fr_1.2fr] lg:items-start">
-        {/* بدّل هاد بـ <img src="/images/alaa.webp" …/> لما تجهز صورة حقيقية */}
-        <div
-          role="img"
-          aria-label={business.name[lang]}
-          className="relative aspect-[4/5] w-full max-w-md border border-line bg-paper-deep"
-        >
-          <span className="absolute inset-0 grid place-items-center text-8xl font-bold text-ink/10">
-            {business.monogram[lang]}
-          </span>
-          <span className="tape absolute inset-x-0 bottom-0 h-2" />
-        </div>
+        <figure className="relative w-full max-w-md">
+          <div className="relative aspect-[4/5] overflow-hidden bg-ink">
+            <img
+              src={`${PHOTO}-800.webp`}
+              srcSet={`${PHOTO}-480.webp 480w, ${PHOTO}-800.webp 800w`}
+              sizes="(min-width: 1024px) 28rem, 100vw"
+              alt={t('about.photoAlt')}
+              width="800"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover"
+            />
+            <span className="tape absolute inset-x-0 bottom-0 h-2" />
+          </div>
+          <figcaption className="absolute -bottom-4 start-6 bg-volt px-3 py-1.5 text-sm font-bold text-ink">
+            {business.name[lang]} · {t('about.photoRole')}
+          </figcaption>
+        </figure>
 
         <div>
           <SectionHeading id="about" kicker={t('about.kicker')} title={t('about.title')} />

@@ -3,7 +3,6 @@
 
 export const business = {
   name: { ar: 'م. علاء عاصي', en: 'Eng. Alaa Assi' },
-  monogram: { ar: 'ع', en: 'A' },
   city: { ar: 'رام الله', en: 'Ramallah' },
   region: { ar: 'فلسطين', en: 'Palestine' },
   email: '', // اختياري

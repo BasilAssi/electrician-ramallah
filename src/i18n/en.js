@@ -119,6 +119,8 @@ const en = {
   about: {
     kicker: 'About Eng. Alaa',
     title: 'Engineer and technician in one',
+    photoRole: 'Electrical engineer',
+    photoAlt: 'Eng. Alaa Assi, electrical engineer and electrician in Ramallah',
     body: [
       "I'm Alaa Assi, an electrical engineer and electrician from Ramallah. I work hands-on on every project, from planning to handover.",
       'I explain exactly what will be done and give a clear price before we start. No surprises on the invoice, and no rushed work.',
