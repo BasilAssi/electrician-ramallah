@@ -54,6 +54,8 @@ const paths = {
     </>
   ),
   plus: <path d="M12 5v14M5 12h14" />,
+  chevron: <path d="m9 5 7 7-7 7" />,
+  expand: <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />,
   arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
 };
 

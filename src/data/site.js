@@ -6,4 +6,4 @@ export const LANGS = {
   en: { path: '/en/', dir: 'ltr', locale: 'en_US' },
 };
 
-export const NAV_SECTIONS = ['services', 'solar', 'about', 'faq', 'contact'];
+export const NAV_SECTIONS = ['services', 'solar', 'work', 'about', 'faq', 'contact'];

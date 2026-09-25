@@ -9,6 +9,7 @@ const en = {
   nav: {
     services: 'Services',
     solar: 'Solar',
+    work: 'Our work',
     about: 'About',
     faq: 'FAQ',
     contact: 'Contact',
@@ -94,6 +95,25 @@ const en = {
       },
     },
     note: 'Solar installation in Ramallah, Al-Bireh and surrounding villages.',
+  },
+
+  work: {
+    kicker: 'Our work',
+    title: 'Projects we built with our own hands',
+    lead: 'Real photos from real job sites: apartments and shops, main and control panels, and underground cabling. No filters, no stock photos.',
+    all: 'All',
+    categories: {
+      home: 'Homes',
+      shop: 'Shops & malls',
+      panel: 'Panels & controls',
+      infra: 'Infrastructure',
+    },
+    filterLabel: 'Filter projects',
+    prev: 'Previous',
+    next: 'Next',
+    open: 'View photo',
+    close: 'Close',
+    altSuffix: 'by Eng. Alaa Assi, electrician in Ramallah',
   },
 
   about: {

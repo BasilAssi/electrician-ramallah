@@ -40,6 +40,13 @@
   }
 }
 
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 /* خط التمديد: شريط رفيع بالأصفر زي شريط العزل */
 @utility tape {
   background-image: repeating-linear-gradient(
