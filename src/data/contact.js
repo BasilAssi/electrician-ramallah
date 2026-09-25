@@ -19,9 +19,9 @@ export const hours = {
   labelKey: 'contact.hours',
 };
 
-// TODO: عدّل الأرقام الحقيقية قبل النشر، أو اتركها null لإخفائها.
+// مخفية لحد ما نعرف الأرقام الصح — حط القيمة (مثلاً '10+') وبتظهر لحالها.
 export const stats = [
-  { id: 'years', value: '10+' },
-  { id: 'projects', value: '400+' },
-  { id: 'solar', value: '60+' },
+  { id: 'years', value: null },
+  { id: 'projects', value: null },
+  { id: 'solar', value: null },
 ];
