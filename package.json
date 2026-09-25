@@ -7,7 +7,8 @@
     "dev": "vite-react-ssg dev",
     "build": "vite-react-ssg build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "qr": "node scripts/qr/generate.mjs"
   },
   "dependencies": {
     "react": "^19.3.0",
@@ -23,6 +24,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.7",
     "globals": "^17.12.0",
+    "qrcode": "^1.5.4",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.1"
   }

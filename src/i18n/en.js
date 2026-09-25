@@ -1,9 +1,9 @@
 const en = {
   meta: {
-    title: 'Alaa Assi | Electrician in Ramallah – Wiring, Repairs & Solar',
+    title: 'Eng. Alaa Assi | Electrician in Ramallah – Wiring, Repairs & Solar',
     description:
-      'Alaa Assi, electrical engineer and electrician in Ramallah and Al-Bireh. Home and shop wiring, fault repair, distribution panels, and solar system installation and maintenance. Call or WhatsApp.',
-    whatsappMessage: "Hi Alaa, I'd like to ask about an electrical service",
+      'Eng. Alaa Assi, electrical engineer and electrician in Ramallah and Al-Bireh. Home and shop wiring, fault repair, distribution panels, and solar system installation and maintenance. Call or WhatsApp.',
+    whatsappMessage: "Hi Eng. Alaa, I'd like to ask about an electrical service",
   },
 
   nav: {
@@ -31,7 +31,7 @@ const en = {
     lead: "Wiring, repairs and solar systems for homes and shops. I'm Alaa Assi, an electrical engineer and hands-on electrician, and I work on every job myself.",
     emergency: 'Sudden fault? We respond fast, emergencies included.',
     panelTitle: 'Distribution panel',
-    panelLabel: 'Alaa Assi · Ramallah',
+    panelLabel: 'Eng. Alaa Assi · Ramallah',
     breakers: ['Lights', 'Kitchen', 'Rooms', 'A/C', 'Heater', 'Solar'],
   },
 
@@ -97,7 +97,7 @@ const en = {
   },
 
   about: {
-    kicker: 'About Alaa',
+    kicker: 'About Eng. Alaa',
     title: 'Engineer and technician in one',
     body: [
       "I'm Alaa Assi, an electrical engineer and electrician from Ramallah. I work hands-on on every project, from planning to handover.",
@@ -167,7 +167,7 @@ const en = {
     title: 'Talk to us directly',
     lead: 'Call or WhatsApp any of the numbers. We reply quickly.',
     labels: {
-      main: 'General electrical',
+      main: 'Electrical & solar',
       solar: 'Solar energy',
     },
     hours: 'Saturday – Thursday, 8 am – 8 pm. Emergencies around the clock.',

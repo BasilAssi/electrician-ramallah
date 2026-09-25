@@ -17,7 +17,7 @@ export default function About() {
           className="relative aspect-[4/5] w-full max-w-md border border-line bg-paper-deep"
         >
           <span className="absolute inset-0 grid place-items-center text-8xl font-bold text-ink/10">
-            {business.name[lang].charAt(0)}
+            {business.monogram[lang]}
           </span>
           <span className="tape absolute inset-x-0 bottom-0 h-2" />
         </div>

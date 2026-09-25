@@ -2,7 +2,8 @@
 // الأرقام بالصيغة الدولية بدون + أو أصفار (970 أو 972 حسب الشبكة).
 
 export const business = {
-  name: { ar: 'علاء عاصي', en: 'Alaa Assi' },
+  name: { ar: 'م. علاء عاصي', en: 'Eng. Alaa Assi' },
+  monogram: { ar: 'ع', en: 'A' },
   city: { ar: 'رام الله', en: 'Ramallah' },
   region: { ar: 'فلسطين', en: 'Palestine' },
   email: '', // اختياري
@@ -10,8 +11,7 @@ export const business = {
 };
 
 export const phones = [
-  { id: 'main', labelKey: 'contact.labels.main', number: '972566169101', whatsapp: true },
-  { id: 'solar', labelKey: 'contact.labels.solar', number: '970569945333', whatsapp: true },
+  { id: 'main', labelKey: 'contact.labels.main', number: '972529557602', whatsapp: true },
 ];
 
 export const hours = {
